@@ -15,10 +15,16 @@ function App() {
     estado: 'SP'
   });
 
+  
   const [editMode, setEditMode] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleEditMode = () => {
     setEditMode(!editMode);
+  };
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
   const editProfile = (data) => {
@@ -28,10 +34,21 @@ function App() {
   return (
     <div className="container-fluid">
       <div className="row full-height">
-        <nav class="navbar navbar-light nav-bar">
-          <span class="navbar-brand mb-0 h1">Sync360</span>
+        <nav className="navbar navbar-light nav-bar">
+          <span className="navbar-brand mb-0 h1">Sync360</span>
+          {/* Botão do Menu para Telas Pequenas */}
+          <button className="navbar-toggler nav-btn" type="button" onClick={toggleMenu}>
+            <span className="navbar-toggler-icon"></span>
+          </button>
         </nav>
-        
+        {showMenu && (
+        <div className='col-md-12 text-center side-container'>
+          <p>Menu</p>
+          <p>Perfil</p>
+          <p>Configurações</p>
+          <p>Sair</p>
+        </div>
+        )}
         {/*Menu Lateral de Navegação*/}
         <div className="col-md-2 side-container d-none d-md-block">
           <NavBar />

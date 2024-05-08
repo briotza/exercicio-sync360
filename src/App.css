@@ -29,6 +29,11 @@
     color: cyan;
 }
 
+.nav-btn{
+    color: cyan;
+    border: 2px solid cyan;
+}
+
 .top-profile {
     position: relative;
     padding-top: 12%;
