@@ -9,7 +9,7 @@
 
 .top-profile {
     position: relative;
-    padding-top: 15%;
+    padding-top: 12%;
     background-color: cyan;
     width: 100%;
 }
@@ -28,7 +28,17 @@
 }
 
 .bio {
-    max-width: 500px;
+    max-width: 100%;
     margin: 0 auto;
     word-wrap: break-word;
+}
+
+.endereco {
+    width: 100%;
+    padding-inline: 7%;
+}
+
+.endereco p {
+    border: 1px solid black;
+    padding: 5px;
 }
