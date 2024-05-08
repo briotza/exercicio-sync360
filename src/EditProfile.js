@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import './App.css';
 
 function EditProfile({ edit }) {
+    const [formData, setFormData] = useState({
+        nome: '',
+        idade: '',
+        rua: '',
+        bairro: '',
+        estado: '',
+        bio: '',
+    });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -17,11 +25,11 @@ function EditProfile({ edit }) {
                 <div className='card-body p-5'>
                     <div className='mb-3'>
                         <label className='form-label'>Nome:</label>
-                        <input type='text' className='form-control' id='name' name='name' value={FormData.name} onChange={handleChange}/>
+                        <input type='text' className='form-control' id='nome' name='nome' value={FormData.nome} onChange={handleChange}/>
                     </div>
                     <div className='mb-3'>
                         <label className='form-label'>Idade:</label>
-                        <input type='number' className='form-control' id='age' name='age' value={FormData.age} onChange={handleChange}/>
+                        <input type='number' className='form-control' id='idade' name='idade' value={FormData.idade} onChange={handleChange}/>
                     </div>
                     <div className='mb-3'>
                         <label className='form-label'>Rua:</label>
