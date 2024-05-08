@@ -8,7 +8,12 @@ function Profile({ profile }) {
                 <img src={profileImage} alt='user-image' style={{borderRadius: '100%', width: '60%'}}/>
             </div>
             <div className='col-md-6 bg-success mt-3'>
-                <span>Coluna 1</span>
+                <div className='card-body text-center'>
+                    <h2>Nome Usuário</h2>
+                    <p className='lead'>30 anos</p>
+                    <p>biografiabiografiabiografia</p>
+                    
+                </div>
             </div>
             <div className='col-md-2 bg-warning mt-3'>
                 <span>Coluna 1</span>
