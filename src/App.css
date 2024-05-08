@@ -4,18 +4,29 @@
 
 .profile-container {
     background-color: #eaf5f5;
+    padding: 0px;
 }
 
 .top-profile {
     position: relative;
+    padding-top: 15%;
+    background-color: cyan;
+    width: 100%;
 }
 
 .top-profile img {
     position: absolute;
-    top: -50px; 
+    top: 45%; 
     left: 50%;
     transform: translateX(-50%); 
     border-radius: 100%; 
-    width: 100px; 
-    height: 100px;
+    width: 20%; 
+}
+
+.user-info {
+    padding-top: 15%;
+}
+
+.bio {
+    max-width: 500px;
 }

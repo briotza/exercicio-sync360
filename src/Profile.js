@@ -5,14 +5,14 @@ import './App.css';
 function Profile({ profile }) {
     return (
         <div className="d-flex flex-column align-items-center">
-            <div className='col-md-4 bg-warning mt-3 text-center top-profile'>
+            <div className='col-md-4 text-center top-profile'>
                 <img src={profileImage} alt='user-image' className='top-profile-img'/>
             </div>
-            <div className='col-md-6 bg-success mt-3'>
+            <div className='col-md-6 user-info'>
                 <div className='card-body text-center'>
                     <h2>Nome Usuário</h2>
                     <p className='lead'>30 anos</p>
-                    <p>biografiabiografiabiografia</p>
+                    <p>biografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografia</p>
                 </div>
             </div>
             <div className='col-md-2 bg-warning mt-3'>
