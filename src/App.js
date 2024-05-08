@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Profile from './Profile';
+import NavBar from './NavBar';
 import React, { useState } from 'react';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <div className="row">
       {/*Menu Lateral de Navegação*/}
       <div className="col-md-2 bg-primary">
-        <p>navegação</p>
+        <NavBar />
       </div>
 
       {/*Perfil*/}
