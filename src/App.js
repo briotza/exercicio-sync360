@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 import Profile from './Profile';
 import NavBar from './NavBar';
 import React, { useState } from 'react';
@@ -20,7 +21,7 @@ function App() {
       </div>
 
       {/*Perfil*/}
-      <div className="col-md-8">
+      <div className="col-md-8 profile-container">
         <Profile profile={profileData} />
       </div>
 
