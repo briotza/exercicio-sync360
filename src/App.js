@@ -15,7 +15,7 @@ function App() {
     estado: 'SP'
   });
 
-  
+
   const [editMode, setEditMode] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -42,12 +42,12 @@ function App() {
           </button>
         </nav>
         {showMenu && (
-        <div className='col-md-12 text-center side-container'>
-          <p>Menu</p>
-          <p>Perfil</p>
-          <p>Configurações</p>
-          <p>Sair</p>
-        </div>
+          <div className='col-md-12 text-center side-container'>
+            <p>Menu</p>
+            <p>Perfil</p>
+            <p>Configurações</p>
+            <p>Sair</p>
+          </div>
         )}
         {/*Menu Lateral de Navegação*/}
         <div className="col-md-2 side-container d-none d-md-block">

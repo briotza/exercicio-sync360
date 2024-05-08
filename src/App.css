@@ -1,4 +1,4 @@
-.full-height{
+.full-height {
     height: 100vh;
 }
 
@@ -7,29 +7,29 @@
     padding: 0px;
 }
 
-.side-container{
+.side-container {
     background-color: rgb(62, 62, 62);
     padding-top: 1%;
     padding-left: 1%;
 }
 
-.side-container p{
+.side-container p {
     color: cyan;
     font-size: 18px;
     cursor: pointer;
 }
 
-.nav-bar{
+.nav-bar {
     background-color: rgb(62, 62, 62);
     padding-left: 1%;
     border-bottom: 1px solid cyan;
 }
 
-.nav-bar span{
+.nav-bar span {
     color: cyan;
 }
 
-.nav-btn{
+.nav-btn {
     color: cyan;
     border: 2px solid cyan;
 }
@@ -43,11 +43,11 @@
 
 .top-profile img {
     position: absolute;
-    top: 45%; 
+    top: 45%;
     left: 50%;
-    transform: translateX(-50%); 
-    border-radius: 100%; 
-    width: 20%; 
+    transform: translateX(-50%);
+    border-radius: 100%;
+    width: 20%;
 }
 
 .user-info {
@@ -74,5 +74,5 @@
 .form-profile {
     width: 75%;
     background-color: #eaf5f5;
-    
+
 }

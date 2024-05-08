@@ -18,7 +18,7 @@ function EditProfile({ edit, cancelEdit }) {
             [name]: value
         }));
     };
-    
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -62,7 +62,7 @@ function EditProfile({ edit, cancelEdit }) {
                         </div>
                         <div className='mb-4'>
                             <label className='form-label'>Biografia:</label>
-                            <textarea className='form-control' maxLength={400} id='bio' name='bio' value={FormData.bio} onChange={handleChange} required  />
+                            <textarea className='form-control' maxLength={400} id='bio' name='bio' value={FormData.bio} onChange={handleChange} required />
                         </div>
                         <button className='btn btn-primary me-2'>SALVAR</button>
                         <button className='btn btn-secondary' onClick={cancelEdit}>CANCELAR</button>
