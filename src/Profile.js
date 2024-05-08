@@ -30,7 +30,7 @@ function Profile({ profile, toggleEditMode }) {
                 </div>
             </div>
             <div className='card-footer mt-5'>
-                <button className='btn btn-primary' onClick={toggleEditMode}>EDITAR</button>
+                <button className='btn btn-primary mb-4' onClick={toggleEditMode}>EDITAR</button>
 
             </div>
         </div>

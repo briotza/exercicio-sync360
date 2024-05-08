@@ -7,6 +7,11 @@
     padding: 0px;
 }
 
+.side-container{
+    background-color: cyan;
+    
+}
+
 .top-profile {
     position: relative;
     padding-top: 12%;
@@ -31,6 +36,7 @@
     max-width: 100%;
     margin: 0 auto;
     word-wrap: break-word;
+    padding-inline: 10px;
 }
 
 .endereco {
@@ -41,11 +47,6 @@
 .endereco p {
     border: 1px solid black;
     padding: 5px;
-}
-
-.side-container{
-    background-color: cyan;
-    
 }
 
 .form-profile {
