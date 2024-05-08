@@ -8,8 +8,25 @@
 }
 
 .side-container{
-    background-color: cyan;
-    
+    background-color: rgb(62, 62, 62);
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.side-container p{
+    color: cyan;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav-bar{
+    background-color: rgb(62, 62, 62);
+    padding-left: 1%;
+    border-bottom: 1px solid cyan;
+}
+
+.nav-bar span{
+    color: cyan;
 }
 
 .top-profile {

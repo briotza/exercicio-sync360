@@ -18,34 +18,39 @@ function App() {
   const [editMode, setEditMode] = useState(false);
 
   const toggleEditMode = () => {
-    setEditMode(!editMode); 
+    setEditMode(!editMode);
   };
 
   const editProfile = (data) => {
     setUser(data);
   };
-  
+
   return (
-   <div className="container-fluid">
-    <div className="row full-height">
-      {/*Menu Lateral de Navegação*/}
-      <div className="col-md-2 side-container">
-        <NavBar />
-      </div>
+    <div className="container-fluid">
+      <div className="row full-height">
+        <nav class="navbar navbar-light nav-bar">
+          <span class="navbar-brand mb-0 h1">Sync360</span>
+        </nav>
+        
+        {/*Menu Lateral de Navegação*/}
+        <div className="col-md-2 side-container d-none d-md-block">
+          <NavBar />
+          <p>Menu</p>
+          <p>Perfil</p>
+          <p>Configurações</p>
+          <p>Sair</p>
+        </div>
 
-      {/*Perfil*/}
-      <div className="col-md-8 profile-container">
-        <Profile profile={user} toggleEditMode={toggleEditMode}/>
-        {editMode && <EditProfile edit={editProfile} cancelEdit={() => setEditMode(false)} />}
+        {/*Perfil*/}
+        <div className="col-md-10 profile-container">
+          <Profile profile={user} toggleEditMode={toggleEditMode} />
+          {editMode && <EditProfile edit={editProfile} cancelEdit={() => setEditMode(false)} />}
 
-      </div>
+        </div>
 
-      {/*Página Acessada*/}
-      <div className="col-md-2 side-container">
 
       </div>
     </div>
-   </div>
   );
 }
 
