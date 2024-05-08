@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Profile from './Profile'
 
 function App() {
   return (
