@@ -16,7 +16,7 @@ function App() {
    <div className="container-fluid">
     <div className="row full-height">
       {/*Menu Lateral de Navegação*/}
-      <div className="col-md-2">
+      <div className="col-md-2 side-container">
         <NavBar />
       </div>
 
@@ -26,7 +26,7 @@ function App() {
       </div>
 
       {/*Página Acessada*/}
-      <div className="col-md-2">
+      <div className="col-md-2 side-container">
 
       </div>
     </div>

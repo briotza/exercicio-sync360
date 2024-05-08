@@ -10,7 +10,7 @@
 .top-profile {
     position: relative;
     padding-top: 12%;
-    background-color: cyan;
+    background-image: linear-gradient(cyan, #eaf5f5);
     width: 100%;
 }
 
@@ -41,4 +41,9 @@
 .endereco p {
     border: 1px solid black;
     padding: 5px;
+}
+
+.side-container{
+    background-color: cyan;
+    
 }
