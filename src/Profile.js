@@ -12,7 +12,7 @@ function Profile({ profile }) {
                 <div className='card-body text-center'>
                     <h2>Nome Usuário</h2>
                     <p className='lead'>30 anos</p>
-                    <p>biografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografiabiografia</p>
+                    <p className='bio'>João, 22 anos, é um estudante de cinema apaixonado pela arte de contar histórias através das lentes da câmera. Desde tenra idade, sua imaginação foi cativada pelas telas do cinema, e agora ele dedica seus dias na faculdade de cinema, transformando sua paixão em profissão. Com olhos atentos e mente criativa, ele está determinado a deixar sua marca na indústria cinematográfica, um quadro por vez.</p>
                 </div>
             </div>
             <div className='col-md-2 bg-warning mt-3'>
