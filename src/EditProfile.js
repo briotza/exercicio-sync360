@@ -3,8 +3,8 @@ import './App.css';
 
 function EditProfile({ edit }) {
     return (
-        <div>
-            
+        <div className='col-md-12 bg-warning'>
+            <p>TESTE</p>
         </div>
     )
 }

@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 
 function App() {
   const [user] = useState({});
+  const [editMode, setEditMode] = useState(false);
   const profileData = {
     name: "Nome",
     age: 1,
@@ -14,7 +15,7 @@ function App() {
   };
 
   const toggleEditMode = () => {
-
+    setEditMode(!editMode); 
   };
   
   return (
@@ -28,6 +29,7 @@ function App() {
       {/*Perfil*/}
       <div className="col-md-8 profile-container">
         <Profile profile={profileData} toggleEditMode={toggleEditMode}/>
+        {editMode && <EditProfile />}
 
       </div>
 
