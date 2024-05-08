@@ -1,7 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Profile from './Profile'
+import Profile from './Profile';
+import React, { useState } from 'react';
 
 function App() {
+  const [user] = useState({});
+  const profileData = {
+    name: "Nome",
+    age: 1,
+    email: "email@email.com"
+  };
+  
   return (
    <div className="container-fluid">
     <div className="row">
@@ -12,7 +20,7 @@ function App() {
 
       {/*Perfil*/}
       <div className="col-md-8">
-        <p>Perfil</p>
+        <Profile profile={profileData} />
       </div>
 
       {/*Página Acessada*/}
