@@ -42,7 +42,7 @@ function EditProfile({ edit, cancelEdit }) {
                     <form onSubmit={handleSubmit}>
                         <div className='mb-3'>
                             <label className='form-label'>Nome:</label>
-                            <input type='text' className='form-control' id='nome' name='nome' value={FormData.nome} onChange={handleChange} required />
+                            <input type='text' className='form-control' maxLength={60} id='nome' name='nome' value={FormData.nome} onChange={handleChange} required />
                         </div>
                         <div className='mb-3'>
                             <label className='form-label'>Idade:</label>
@@ -50,11 +50,11 @@ function EditProfile({ edit, cancelEdit }) {
                         </div>
                         <div className='mb-3'>
                             <label className='form-label'>Rua:</label>
-                            <input type='text' className='form-control' id='rua' name='rua' value={FormData.rua} onChange={handleChange} required />
+                            <input type='text' className='form-control' maxLength={40} id='rua' name='rua' value={FormData.rua} onChange={handleChange} required />
                         </div>
                         <div className='mb-3'>
                             <label className='form-label'>Bairro:</label>
-                            <input type='text' className='form-control' id='bairro' name='bairro' value={FormData.bairro} onChange={handleChange} required />
+                            <input type='text' className='form-control' maxLength={40} id='bairro' name='bairro' value={FormData.bairro} onChange={handleChange} required />
                         </div>
                         <div className='mb-3'>
                             <label className='form-label'>Estado:</label>
