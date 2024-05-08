@@ -28,6 +28,9 @@ function Profile({ profile }) {
                     <h5>Estado</h5>
                     <p>Rio de Janeiro</p>
                 </div>
+            </div>
+            <div className='card-footer mt-5'>
+                <button className='btn btn-primary'>EDITAR</button>
 
             </div>
         </div>
