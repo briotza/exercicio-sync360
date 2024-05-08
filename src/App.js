@@ -14,7 +14,7 @@ function App() {
   
   return (
    <div className="container-fluid">
-    <div className="row">
+    <div className="row full-height">
       {/*Menu Lateral de Navegação*/}
       <div className="col-md-2 bg-primary">
         <NavBar />

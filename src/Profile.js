@@ -1,11 +1,12 @@
 import React from 'react';
 import profileImage from './img/profile.jpg';
+import './App.css';
 
 function Profile({ profile }) {
     return (
         <div className="d-flex flex-column align-items-center">
-            <div className='col-md-4 bg-secondary text-center'>
-                <img src={profileImage} alt='user-image' style={{borderRadius: '100%', width: '60%'}}/>
+            <div className='col-md-4 bg-warning mt-3 text-center top-profile'>
+                <img src={profileImage} alt='user-image' className='top-profile-img'/>
             </div>
             <div className='col-md-6 bg-success mt-3'>
                 <div className='card-body text-center'>
