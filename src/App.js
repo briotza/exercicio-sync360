@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Profile from './Profile';
 import NavBar from './NavBar';
+import EditProfile from './EditProfile'
 import React, { useState } from 'react';
 
 function App() {
@@ -10,6 +11,10 @@ function App() {
     name: "Nome",
     age: 1,
     email: "email@email.com"
+  };
+
+  const toggleEditMode = () => {
+
   };
   
   return (
@@ -22,7 +27,8 @@ function App() {
 
       {/*Perfil*/}
       <div className="col-md-8 profile-container">
-        <Profile profile={profileData} />
+        <Profile profile={profileData} toggleEditMode={toggleEditMode}/>
+
       </div>
 
       {/*Página Acessada*/}

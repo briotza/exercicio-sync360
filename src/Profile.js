@@ -2,7 +2,7 @@ import React from 'react';
 import profileImage from './img/profile.jpg';
 import './App.css';
 
-function Profile({ profile }) {
+function Profile({ profile, toggleEditMode }) {
     return (
         <div className="d-flex flex-column align-items-center">
             <div className='col-md-4 text-center top-profile'>
@@ -30,7 +30,7 @@ function Profile({ profile }) {
                 </div>
             </div>
             <div className='card-footer mt-5'>
-                <button className='btn btn-primary'>EDITAR</button>
+                <button className='btn btn-primary' onClick={toggleEditMode}>EDITAR</button>
 
             </div>
         </div>
