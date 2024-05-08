@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Profile from './Profile';
 import NavBar from './NavBar';
-import EditProfile from './EditProfile'
+import EditProfile from './EditProfile';
 import React, { useState } from 'react';
 
 function App() {
@@ -17,9 +17,12 @@ function App() {
 
   const [editMode, setEditMode] = useState(false);
 
-
   const toggleEditMode = () => {
     setEditMode(!editMode); 
+  };
+
+  const editProfile = (data) => {
+    setUser(data);
   };
   
   return (
@@ -33,7 +36,7 @@ function App() {
       {/*Perfil*/}
       <div className="col-md-8 profile-container">
         <Profile profile={user} toggleEditMode={toggleEditMode}/>
-        {editMode && <EditProfile />}
+        {editMode && <EditProfile edit={editProfile} cancelEdit={() => setEditMode(false)} />}
 
       </div>
 
