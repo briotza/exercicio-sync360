@@ -19,7 +19,6 @@ function EditProfile({ edit, cancelEdit }) {
         }));
     };
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         for (const key in formData) {
@@ -31,6 +30,12 @@ function EditProfile({ edit, cancelEdit }) {
         edit(formData);
         cancelEdit();
     };
+
+    const estadosBrasileiros = [
+        "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", 
+        "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", 
+        "SP", "SE", "TO"
+    ];
 
     return (
         <div className='col-md-12 mt-5 d-flex justify-content-center'>
@@ -58,7 +63,12 @@ function EditProfile({ edit, cancelEdit }) {
                         </div>
                         <div className='mb-3'>
                             <label className='form-label'>Estado:</label>
-                            <input type='text' className='form-control' id='estado' name='estado' value={FormData.estado} onChange={handleChange} required />
+                            <select className='form-control' id='estado' name='estado' value={formData.estado} onChange={handleChange} required>
+                            <option value=''>Selecione um estado</option>
+                            {estadosBrasileiros.map((estado, index) => (
+                                <option key={index} value={estado}>{estado}</option>
+                            ))}
+                        </select>
                         </div>
                         <div className='mb-4'>
                             <label className='form-label'>Biografia:</label>
