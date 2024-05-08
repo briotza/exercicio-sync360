@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Profile from './Profile';
-import NavBar from './NavBar';
 import EditProfile from './EditProfile';
 import React, { useState } from 'react';
 
