@@ -13,6 +13,8 @@ function Profile({ profile, toggleEditMode }) {
         estado: ''
     });
 
+    const [DatabaseError, setDatabaseError] = useState(false);
+
     useEffect(() => {
         axios.get('http://localhost:8800/usuarios/1')
         .then(response => {
@@ -20,11 +22,12 @@ function Profile({ profile, toggleEditMode }) {
             const userDataFromApi = response.data;
             setUserData(userDataFromApi);
         })
-        .catch(err => {
-            console.err('Erro ao buscar dados do usuário:', err);
+        .catch(error => {
+            console.error('Erro ao buscar dados do usuário:', error);
             setDatabaseError(true);
         });
-    });
+    }, []);
+
     return (
         <div className="d-flex flex-column align-items-center">
             <div className='col-md-4 text-center top-profile'>
