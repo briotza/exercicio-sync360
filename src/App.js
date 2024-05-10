@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="container-fluid page-container">
-      <div className="row full-height">
+      <div className="row">
         <nav className="navbar navbar-light nav-bar">
           <span className="navbar-brand mb-0 h1">Sync360</span>
           <button className="navbar-toggler d-md-none nav-btn" type="button" onClick={toggleMenu}>
@@ -41,13 +41,17 @@ function App() {
           </button>
         </nav>
         {showMenu && (
-          <div className='col-md-12 text-center side-container'>
+          <div className='col-md-12 text-center d-md-none hidden-side-container'>
             <p>Menu</p>
             <p>Perfil</p>
             <p>Configurações</p>
             <p>Sair</p>
           </div>
         )}
+      </div>
+
+      <div className='row full-height'>
+
         {/*Menu Lateral de Navegação*/}
         <div className="col-md-2 side-container d-none d-md-block">
           <p>Menu</p>
