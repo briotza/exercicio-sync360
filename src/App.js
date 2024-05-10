@@ -27,7 +27,7 @@ function App() {
     setShowMenu(!showMenu);
   };
 
-  const editProfile = (data) => {
+  const updateProfileData = (data) => {
     setUser(data);
   };
 
@@ -59,11 +59,11 @@ function App() {
         {/*Perfil*/}
         <div className="col-md-10 profile-container">
           <Profile profile={user} toggleEditMode={toggleEditMode} />
-          {editMode && <EditProfile edit={editProfile} cancelEdit={() => setEditMode(false)} />}
+          {editMode && (
+            <EditProfile cancelEdit={() => setEditMode(false)} updateProfileData={updateProfileData} />
+          )}
 
         </div>
-
-
       </div>
     </div>
   );
