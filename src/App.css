@@ -2,7 +2,7 @@
     height: 100vh;
 }
 
-.page-container{
+.page-container {
     padding-inline: 0px;
 }
 
@@ -12,7 +12,8 @@
     overflow-y: auto;
 }
 
-.side-container, .hidden-side-container {
+.side-container,
+.hidden-side-container {
     background-color: rgb(62, 62, 62);
     border-bottom: 1px solid cyan;
 }
@@ -32,7 +33,7 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.hidden-side-container p{
+.hidden-side-container p {
     color: cyan;
     font-size: 18px;
     cursor: pointer;
@@ -60,7 +61,7 @@
     border: 2px solid cyan;
 }
 
-.disconnected-img{
+.disconnected-img {
     width: 20%;
     height: auto;
     margin: auto;

@@ -1,4 +1,4 @@
-const { db } = require('../db'); 
+const { db } = require('../db');
 
 // Pegar todos os usuários
 exports.getAllUsers = (req, res) => {
@@ -33,7 +33,7 @@ exports.updateUserById = (req, res) => {
     const updateUserData = req.body;
     const sql = 'UPDATE usuarios SET ? WHERE id = ?';
     db.query(sql, [updateUserData, id], (err, result) => {
-        if(err) {
+        if (err) {
             res.status(500).send('Erro ao atualizar usuário');
             return;
         }

@@ -33,8 +33,8 @@ function Profile({ toggleEditMode }) {
         <div className="d-flex flex-column align-items-center">
             {databaseError ? (
                 <div>
-                <h3 style={{ marginTop: '20px', wordWrap: 'break-word', textAlign: 'center' }}>Sem conexão com o banco de dados!</h3>
-                <img src={disconnected} alt='disconnected' className='disconnected-img' />
+                    <h3 style={{ marginTop: '20px', wordWrap: 'break-word', textAlign: 'center' }}>Sem conexão com o banco de dados!</h3>
+                    <img src={disconnected} alt='disconnected' className='disconnected-img' />
                 </div>
             ) : (
                 <React.Fragment>

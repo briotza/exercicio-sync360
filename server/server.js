@@ -1,5 +1,5 @@
 const express = require('express');
-const userRoutes = require("./routes/users"); // Usando require em vez de import
+const userRoutes = require("./routes/users");
 const cors = require('cors');
 const db = require('./db');
 
@@ -11,5 +11,5 @@ app.use(cors());
 
 app.use('/usuarios', userRoutes);
 
-const port = 8800; 
+const port = 8800;
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
