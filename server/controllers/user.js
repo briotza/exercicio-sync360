@@ -41,4 +41,3 @@ exports.updateUserById = (req, res) => {
     });
 };
 
-module.exports = { getUsers }; 
