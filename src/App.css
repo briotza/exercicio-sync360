@@ -46,8 +46,9 @@
 
 .nav-bar {
     background-color: rgb(62, 62, 62);
-    padding-left: 1%;
+    padding-inline: 30px;
     border-bottom: 1px solid cyan;
+    height: 60px;
 }
 
 .nav-bar span {
