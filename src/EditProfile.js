@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 
@@ -67,7 +67,11 @@ function EditProfile({ edit, cancelEdit, updateProfileData }) {
         <div className='col-md-12 mt-5 d-flex justify-content-center'>
             <div className='card form-profile'>
                 <div className='card-header'>
-                    <h3>Editar Perfil</h3>
+                    {databaseError ? (
+                        <h3>Sem conexão com o banco de dados!</h3>
+                    ) : (
+                        <h3>Editar Perfil</h3>
+                    )}
                 </div>
                 <div className='card-body p-5'>
                     <form onSubmit={handleSubmit}>
