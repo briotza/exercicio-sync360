@@ -1,5 +1,6 @@
 const mysql = require('mysql2');
 
+// Configuração do Banco
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -7,6 +8,7 @@ const db = mysql.createConnection({
     database: "sync360db"
 });
 
+// Conectar ao banco
 db.connect((err) => {
     if (err) {
         throw err;

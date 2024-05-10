@@ -5,6 +5,7 @@ import './App.css';
 import axios from 'axios';
 
 function Profile({ toggleEditMode }) {
+    // Armazenar dados de usuário
     const [userData, setUserData] = useState({
         nome: '',
         idade: '',
@@ -14,9 +15,12 @@ function Profile({ toggleEditMode }) {
         estado: ''
     });
 
+    // Status de Conexão
     const [databaseError, setDatabaseError] = useState(false);
 
+    // Carregar dados do servidor
     useEffect(() => {
+        // GET para obter dados
         axios.get('http://localhost:8800/usuarios/1')
             .then(response => {
                 console.log('Dados do usuário recebidos:', response.data);
@@ -31,13 +35,15 @@ function Profile({ toggleEditMode }) {
 
     return (
         <div className="d-flex flex-column align-items-center">
+            {/*Erro de Conexão*/}
             {databaseError ? (
                 <div>
                     <h3 style={{ marginTop: '20px', wordWrap: 'break-word', textAlign: 'center' }}>Sem conexão com o banco de dados!</h3>
                     <img src={disconnected} alt='disconnected' className='disconnected-img' />
                 </div>
             ) : (
-                <React.Fragment>
+                <React.Fragment> {/*Se não houver erro de conexão*/}
+                    {/*Perfil*/}
                     <div className='col-md-4 text-center top-profile'>
                         <img src={profileImage} alt='user-image' className='top-profile-img' />
                     </div>
@@ -62,6 +68,7 @@ function Profile({ toggleEditMode }) {
                             <p>{userData.estado}</p>
                         </div>
                     </div>
+                    {/*Botão de Editar*/}
                     {!databaseError && (
                         <div className='card-footer mt-5'>
                             <button className='btn btn-primary mb-4' onClick={toggleEditMode}>EDITAR</button>
