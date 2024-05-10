@@ -44,6 +44,7 @@ function EditProfile({ edit, cancelEdit, updateProfileData }) {
         }
         updateProfile(formData);
         cancelEdit();
+        window.location.reload();
     };
 
     const updateProfile = (data) => {
