@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid page-container">
       <div className="row full-height">
         <nav className="navbar navbar-light nav-bar">
           <span className="navbar-brand mb-0 h1">Sync360</span>
