@@ -1,6 +1,7 @@
 import React from 'react';
 import profileImage from './img/profile.jpg';
 import './App.css';
+import axios from 'axios';
 
 function Profile({ profile, toggleEditMode }) {
     return (
