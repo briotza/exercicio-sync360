@@ -3,7 +3,7 @@ import profileImage from './img/profile.jpg';
 import './App.css';
 import axios from 'axios';
 
-function Profile({ profile, toggleEditMode }) {
+function Profile({ toggleEditMode }) {
     const [userData, setUserData] = useState({
         nome: '',
         idade: '',
@@ -17,15 +17,15 @@ function Profile({ profile, toggleEditMode }) {
 
     useEffect(() => {
         axios.get('http://localhost:8800/usuarios/1')
-        .then(response => {
-            console.log('Dados do usuário recebidos:', response.data);
-            const userDataFromApi = response.data;
-            setUserData(userDataFromApi);
-        })
-        .catch(error => {
-            console.error('Erro ao buscar dados do usuário:', error);
-            setDatabaseError(true);
-        });
+            .then(response => {
+                console.log('Dados do usuário recebidos:', response.data);
+                const userDataFromApi = response.data;
+                setUserData(userDataFromApi);
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados do usuário:', error);
+                setDatabaseError(true);
+            });
     }, []);
 
     return (
@@ -35,29 +35,31 @@ function Profile({ profile, toggleEditMode }) {
             </div>
             <div className='col-md-6 user-info'>
                 <div className='card-body text-center'>
-                    <h2>{profile.nome}</h2>
-                    <p className='lead'>{profile.idade} anos</p>
-                    <p className='bio'>{profile.bio}</p>
+                    <h2>{userData.nome}</h2>
+                    <p className='lead'>{userData.idade} anos</p>
+                    <p className='bio'>{userData.bio}</p>
                 </div>
             </div>
             <div className='row mt-5 endereco'>
                 <div className='col-md-4'>
                     <h5>Rua</h5>
-                    <p>{profile.rua}</p>
+                    <p>{userData.rua}</p>
                 </div>
                 <div className='col-md-4'>
                     <h5>Bairro</h5>
-                    <p>{profile.bairro}</p>
+                    <p>{userData.bairro}</p>
                 </div>
                 <div className='col-md-4'>
                     <h5>Estado</h5>
-                    <p>{profile.estado}</p>
+                    <p>{userData.estado}</p>
                 </div>
             </div>
-            <div className='card-footer mt-5'>
-                <button className='btn btn-primary mb-4' onClick={toggleEditMode}>EDITAR</button>
+            {!DatabaseError && (
+                <div className='card-footer mt-5'>
+                    <button className='btn btn-primary mb-4' onClick={toggleEditMode}>EDITAR</button>
+                </div>
+            )}
 
-            </div>
         </div>
     )
 }
