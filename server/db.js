@@ -7,4 +7,11 @@ const db = mysql.createConnection({
     database: "sync360db"
 });
 
+db.connect((err) => {
+    if (err) {
+        throw err;
+    }
+    console.log('Conexão com o banco de dados estabelecida!')
+});
+
 module.exports = { db };
