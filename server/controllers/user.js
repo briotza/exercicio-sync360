@@ -21,6 +21,8 @@ exports.getUserById = (req, res) => {
         }
         if (result.length > 0) {
             res.send(result[0]);
+        } else {
+            res.status(404).send('Usuário não encontrado');
         }
     })
 }
