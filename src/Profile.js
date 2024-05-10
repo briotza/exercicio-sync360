@@ -29,41 +29,41 @@ function Profile({ toggleEditMode }) {
     }, []);
 
     return (
-        <div className="d-flex flex-column align-items-center">
+        <div className="d-flex flex-column align-items-center mt-5">
             {databaseError ? (
                 <h3>Sem conexão com o banco de dados!</h3>
-            ):(
+            ) : (
                 <React.Fragment>
-            <div className='col-md-4 text-center top-profile'>
-                <img src={profileImage} alt='user-image' className='top-profile-img' />
-            </div>
-            <div className='col-md-6 user-info'>
-                <div className='card-body text-center'>
-                    <h2>{userData.nome}</h2>
-                    <p className='lead'>{userData.idade} anos</p>
-                    <p className='bio'>{userData.bio}</p>
-                </div>
-            </div>
-            <div className='row mt-5 endereco'>
-                <div className='col-md-4'>
-                    <h5>Rua</h5>
-                    <p>{userData.rua}</p>
-                </div>
-                <div className='col-md-4'>
-                    <h5>Bairro</h5>
-                    <p>{userData.bairro}</p>
-                </div>
-                <div className='col-md-4'>
-                    <h5>Estado</h5>
-                    <p>{userData.estado}</p>
-                </div>
-            </div>
-            {!databaseError && (
-                <div className='card-footer mt-5'>
-                    <button className='btn btn-primary mb-4' onClick={toggleEditMode}>EDITAR</button>
-                </div>
-            )}
-            </React.Fragment>
+                    <div className='col-md-4 text-center top-profile'>
+                        <img src={profileImage} alt='user-image' className='top-profile-img' />
+                    </div>
+                    <div className='col-md-6 user-info'>
+                        <div className='card-body text-center'>
+                            <h2>{userData.nome}</h2>
+                            <p className='lead'>{userData.idade} anos</p>
+                            <p className='bio'>{userData.bio}</p>
+                        </div>
+                    </div>
+                    <div className='row mt-5 endereco'>
+                        <div className='col-md-4'>
+                            <h5>Rua</h5>
+                            <p>{userData.rua}</p>
+                        </div>
+                        <div className='col-md-4'>
+                            <h5>Bairro</h5>
+                            <p>{userData.bairro}</p>
+                        </div>
+                        <div className='col-md-4'>
+                            <h5>Estado</h5>
+                            <p>{userData.estado}</p>
+                        </div>
+                    </div>
+                    {!databaseError && (
+                        <div className='card-footer mt-5'>
+                            <button className='btn btn-primary mb-4' onClick={toggleEditMode}>EDITAR</button>
+                        </div>
+                    )}
+                </React.Fragment>
             )}
         </div>
     )
