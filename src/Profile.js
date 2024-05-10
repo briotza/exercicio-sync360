@@ -29,7 +29,7 @@ function Profile({ toggleEditMode }) {
     }, []);
 
     return (
-        <div className="d-flex flex-column align-items-center mt-5">
+        <div className="d-flex flex-column align-items-center">
             {databaseError ? (
                 <h3>Sem conexão com o banco de dados!</h3>
             ) : (
