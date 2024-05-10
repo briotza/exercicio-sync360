@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import profileImage from './img/profile.jpg';
+import disconnected from './img/sad.png';
 import './App.css';
 import axios from 'axios';
 
@@ -31,7 +32,10 @@ function Profile({ toggleEditMode }) {
     return (
         <div className="d-flex flex-column align-items-center">
             {databaseError ? (
-                <h3>Sem conexão com o banco de dados!</h3>
+                <div>
+                <h3 style={{ marginTop: '20px', wordWrap: 'break-word', textAlign: 'center' }}>Sem conexão com o banco de dados!</h3>
+                <img src={disconnected} alt='disconnected' className='disconnected-img' />
+                </div>
             ) : (
                 <React.Fragment>
                     <div className='col-md-4 text-center top-profile'>

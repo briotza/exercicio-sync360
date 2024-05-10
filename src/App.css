@@ -60,6 +60,14 @@
     border: 2px solid cyan;
 }
 
+.disconnected-img{
+    width: 20%;
+    height: auto;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+
 .top-profile {
     position: relative;
     padding-top: 12%;
