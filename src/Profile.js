@@ -13,7 +13,7 @@ function Profile({ toggleEditMode }) {
         estado: ''
     });
 
-    const [DatabaseError, setDatabaseError] = useState(false);
+    const [databaseError, setDatabaseError] = useState(false);
 
     useEffect(() => {
         axios.get('http://localhost:8800/usuarios/1')
@@ -58,7 +58,7 @@ function Profile({ toggleEditMode }) {
                     <p>{userData.estado}</p>
                 </div>
             </div>
-            {!DatabaseError && (
+            {!databaseError && (
                 <div className='card-footer mt-5'>
                     <button className='btn btn-primary mb-4' onClick={toggleEditMode}>EDITAR</button>
                 </div>
