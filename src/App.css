@@ -74,6 +74,8 @@
     transform: translateX(-50%);
     border-radius: 100%;
     width: 20%;
+    height: auto;
+    aspect-ratio: 1 / 1;
 }
 
 .user-info {
