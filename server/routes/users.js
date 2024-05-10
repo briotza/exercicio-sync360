@@ -8,5 +8,7 @@ router.get('/', UserController.getAllUsers);
 // Rota para pegar usuário por id
 router.get('/:id', UserController.getUserById);
 
+// Rota para atualizar usuário por id
+router.patch('/:id', UserController.updateUserById);
 
 module.exports = router; 
