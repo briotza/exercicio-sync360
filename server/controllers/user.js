@@ -1,5 +1,6 @@
 const { db } = require('../db.js'); 
 
+// Pegar todos os usuários
 exports.getAllUsers = (req, res) => {
     const sql = 'SELECT * FROM usuarios';
     db.query(sql, (err, result) => {
@@ -9,5 +10,19 @@ exports.getAllUsers = (req, res) => {
         res.send(result);
     });
 };
+
+// Pegar usuário por id
+exports.getUserById = (req, res) => {
+    const id = req.params.id;
+    const sql = 'SELECT * FROM usuarios WHERE id = ?';
+    db.query(sql, [id], (err, result) => {
+        if (err) {
+            throw err;
+        }
+        if (result.length > 0) {
+            res.send(result[0]);
+        }
+    })
+}
 
 module.exports = { getUsers }; 
