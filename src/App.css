@@ -40,7 +40,7 @@
     margin-block: 10px;
 }
 
-.hidden-side-container p{
+.hidden-side-container p:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
