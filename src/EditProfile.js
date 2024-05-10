@@ -18,7 +18,7 @@ function EditProfile({ edit, cancelEdit, updateProfileData }) {
             .then(response => {
                 console.log('Dados do usuário recebidos:', response.data);
                 const userDataFromApi = response.data;
-                setUserData(userDataFromApi);
+                setFormData(userDataFromApi);
             })
             .catch(error => {
                 console.error('Erro ao buscar dados do usuário:', error);
