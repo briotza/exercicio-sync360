@@ -24,7 +24,21 @@ exports.getUserById = (req, res) => {
         } else {
             res.status(404).send('Usuário não encontrado');
         }
-    })
-}
+    });
+};
+
+// Atualizar usuário por id
+exports.updateUserById = (req, res) => {
+    const id = req.params.id;
+    const updateUserData = req.body;
+    const sql = 'UPDATE usuarios SET ? WHERE id = ?';
+    db.query(sql, [updateUserData, id], (err, result) => {
+        if(err) {
+            res.status(500).send('Erro ao atualizar usuário');
+            return;
+        }
+        res.send('Dados do usuário atualizados com sucesso')
+    });
+};
 
 module.exports = { getUsers }; 
