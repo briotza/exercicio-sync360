@@ -30,6 +30,10 @@ function Profile({ toggleEditMode }) {
 
     return (
         <div className="d-flex flex-column align-items-center">
+            {databaseError ? (
+                <h3>Sem conexão com o banco de dados!</h3>
+            ):(
+                <React.Fragment>
             <div className='col-md-4 text-center top-profile'>
                 <img src={profileImage} alt='user-image' className='top-profile-img' />
             </div>
@@ -59,7 +63,8 @@ function Profile({ toggleEditMode }) {
                     <button className='btn btn-primary mb-4' onClick={toggleEditMode}>EDITAR</button>
                 </div>
             )}
-
+            </React.Fragment>
+            )}
         </div>
     )
 }
