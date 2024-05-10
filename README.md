@@ -7,7 +7,12 @@ Este é um projeto desenvolvido como parte de um exercício para um processo sel
 ## Funcionalidades
 
 - Exibição dos dados do usuário.
+
+<img src="/src/img/screenshot1.png" alt="Dados do usuário">
+
 - Edição dos dados do usuário.
+
+<img src="/src/img/screenshot2.png" alt="Formulário de Edição">
 
 ## Tecnologias Utilizadas
 
