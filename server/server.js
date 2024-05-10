@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use("/", userRoutes);
+app.use('/usuarios', userRoutes);
 
 const port = 8800; 
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));

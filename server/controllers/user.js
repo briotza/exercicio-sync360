@@ -1,4 +1,4 @@
-const { db } = require('../db.js'); 
+const { db } = require('../db'); 
 
 // Pegar todos os usuários
 exports.getAllUsers = (req, res) => {
