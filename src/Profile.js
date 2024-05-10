@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import profileImage from './img/profile.jpg';
 import './App.css';
 import axios from 'axios';
 
 function Profile({ profile, toggleEditMode }) {
+    const [userData, setUserData] = useState({
+        nome: '',
+        idade: '',
+        bio: '',
+        rua: '',
+        bairro: '',
+        estado: ''
+    });
+
+    useEffect(() => {
+        axios.get('http://localhost:8800/usuarios/1')
+        .then(response => {
+            console.log('Dados do usuário recebidos:', response.data);
+            const userDataFromApi = response.data;
+            setUserData(userDataFromApi);
+        })
+        .catch(err => {
+            console.err('Erro ao buscar dados do usuário:', err);
+            setDatabaseError(true);
+        });
+    });
     return (
         <div className="d-flex flex-column align-items-center">
             <div className='col-md-4 text-center top-profile'>
